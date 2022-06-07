@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+union pessoa{
+	char nome[100];
+	int idade;
+};
+
+int main() {
+
+	int numero = 42;
+	float nota = 7.9;
+	char letra = 'd';
+	double outraNota = 19.4;
+
+	printf("A variável 'número' tem valor %d e ocupa %u bytes em memória\n",
+			numero, sizeof(numero));
+	printf("A variável 'nota' tem valor %.2f e ocupa %u bytes em memória\n",
+			nota, sizeof(nota));
+	printf("A variável 'letra' tem valor %c e ocupa %u bytes em memória\n",
+			letra, sizeof(letra));
+	printf(
+			"A variável 'outraNota' tem valor %.2lf e ocupa %u bytes em memória\n",
+			outraNota, sizeof(outraNota));
+
+	union pessoa pes;
+
+	strcpy(pes.nome, "João Pessoa");
+	printf("Dados de %s\n", pes.nome);
+
+	pes.idade = 39;
+	printf("Ela tem %d anos\n", pes.idade);
+
+	printf("A variável pes está ocupando %u bytes em memória", sizeof(pes));
+
+	return 0;
+}

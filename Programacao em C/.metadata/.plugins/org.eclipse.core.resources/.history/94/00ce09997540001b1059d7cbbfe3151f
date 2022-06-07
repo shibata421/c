@@ -1,0 +1,38 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+/*
+ * atof() converte string para double (ASCII to float)
+ * atoi() converte string para int (ASCII to int)
+ * atol() converte string para long (ASCII to long)
+ * */
+
+int main() {
+	char valor_s[5];
+	double valor_d;
+	int valor_i;
+	long int valor_l;
+
+	strcpy(valor_s, "4.5");
+	valor_d = atof(valor_s);
+	printf("O valor é %.2f\n", valor_d); // 4.50
+
+	strcpy(valor_s, "4.a");
+	valor_d = atof(valor_s);
+	printf("O valor é %.2f\n", valor_d); // 4.00 (ignora a letra)
+
+	strcpy(valor_s, "5");
+	valor_i = atoi(valor_s);
+	printf("O valor é %d\n", valor_i); // 5
+
+	strcpy(valor_s, "a");
+	valor_i = atoi(valor_s);
+	printf("O valor é %d\n", valor_i); // 0 (ignora a letra)
+
+	strcpy(valor_s, "12345678912345679");
+	valor_l = atol(valor_s);
+	printf("O valor é %ld\n", valor_l); // 0 (ignora a letra)
+
+	return 0;
+}

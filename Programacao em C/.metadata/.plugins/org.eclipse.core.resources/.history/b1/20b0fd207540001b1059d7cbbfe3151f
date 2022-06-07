@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+/*
+ * atof() converte string para double
+ * atoi() converte string para int
+ * */
+
+int main() {
+	char valor_s[5];
+	double valor_d;
+	int valor_i;
+
+	strcpy(valor_s, "4.5");
+	valor_d = atof(valor_s);
+	printf("O valor é %.2f", valor_d); // 4.50
+
+	strcpy(valor_s, "4.a");
+	valor_d = atof(valor_s);
+	printf("O valor é %.2f", valor_d); // 4.00 (ignora a letra)
+
+	strcpy(valor_s, "5");
+	valor_i = atoi(valor_s);
+	printf("O valor é %d", valor_i); // 5 (ignora a letra)
+
+	return 0;
+}

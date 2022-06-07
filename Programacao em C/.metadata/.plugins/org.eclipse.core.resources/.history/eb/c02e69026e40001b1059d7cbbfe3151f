@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int contador = 1;
+
+int main() {
+	printf("Imprimindo....\%dn", contador);
+	contador++;
+
+	while (contador < 10) {
+		main();
+	}
+	return 0;
+}
