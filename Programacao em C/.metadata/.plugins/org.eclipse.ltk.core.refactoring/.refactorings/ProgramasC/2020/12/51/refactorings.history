@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ProgramasC/ifdef.c&apos; to &apos;ifndef.c&apos;" description="Rename resource &apos;ifdef.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ifdef.c" name="ifndef.c" stamp="1608213111191" updateReferences="true"/>
-</session>
